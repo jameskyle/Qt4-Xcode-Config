@@ -2,6 +2,15 @@ A simple script that first runs qmake with the -spec macx-xcode switch, then
 populates the generated Xcode project with build options specified in the
 xcode.yaml file. An example file is provided.
 
+There's a top level 'pbxproj' field with a few settings. These are settings
+found on the project wide level usually found in the 'General' tab of the Project
+Info.
+
+Each top level key after that specifies a project build target.
+
+The script does not yet create targets that don't exist, so currently you'll
+only use 'Debug' and 'Release' which are created by the qmake generator.
+
 1. Edit the xcode.yaml file with your preferred settings for different targets
 2. Put both xcode.yaml and qxc_config.py in your Qt4 project directory
 3. Run ./qxc_config.py
