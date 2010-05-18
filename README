@@ -1,0 +1,11 @@
+A simple script that first runs qmake with the -spec macx-xcode switch, then
+populates the generated Xcode project with build options specified in the
+xcode.yaml file. An example file is provided.
+
+1. Edit the xcode.yaml file with your preferred settings for different targets
+2. Put both xcode.yaml and qxc_config.py in your Qt4 project directory
+3. Run ./qxc_config.py
+
+cheers,
+
+-jkyle
